@@ -40,8 +40,8 @@ BEGIN{
  # ARGC=2
  first_subckt = 1
  pathsep="_"
- nodes["M"]=4; nodes["R"]=2; nodes["D"]=2; nodes["V"]=2
- nodes["I"]=2; nodes["C"]=2; nodes["L"]=2; nodes["Q"]=3
+ nodes["W"]=2; nodes["S"]=3; nodes["Y"]=3; nodes["D"]=4
+ nodes["P"]=1; nodes["C"]=1; nodes["L"]=2; nodes["Q"]=3
  nodes["E"]=4; nodes["G"]=4; nodes["H"]=2; nodes["F"]=2
 }
 
@@ -156,7 +156,7 @@ function expand(name, path, param,ports,   		# func. params
   }
   else
   {
-   if(line[1] ~ /^[EGHFCMDQRGIV]/)
+   if(line[1] ~ /^[WSYPEGHFCMDQRGIV]/)
    {
     printf "%s ",line[1] pathname
     for(k=2;k<=nodes[substr(line[1],1,1)]+1;k++)
