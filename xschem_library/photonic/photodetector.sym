@@ -1,0 +1,32 @@
+v {xschem version=3.1.0 file_version=1.2
+}
+G {}
+K {type=photodetector
+
+format="@name @pinlist r=@r file=@file"
+
+template="name=pdet1
+r=1
+file=sample.txt
+device=photodetector"}
+V {}
+S {}
+E {}
+L 4 -30 0 -20 0 {}
+L 9 -12.5 -10 12.5 -10 {}
+L 9 0 12.5 0 20 {}
+L 9 0 -20 0 -10 {}
+L 9 -12.5 -5 -7.5 -0 {}
+L 9 -7.5 -2.5 -7.5 -0 {}
+L 9 -10 0 -7.5 -0 {}
+L 9 -15 0 -10 5 {}
+L 9 -10 2.5 -10 5 {}
+L 9 -12.5 5 -10 5 {}
+B 5 -32.5 -2.5 -27.5 2.5 {name=ph_in dir=inout pinnumber=1}
+B 11 -20 -7.5 -15 7.5 {}
+B 12 -20 -20 20 20 {}
+P 9 4 -12.5 12.5 12.5 12.5 0 -10 -12.5 12.5 {}
+T {@name} -20 -23.75 2 1 0.2 0.2 {}
+T {r=@r} -18.75 20 0 0 0.2 0.2 {}
+T {@#0:net_name} -22.5 -3.75 2 0 0.15 0.15 {layer=15}
+T {file=@file} -18.75 30 0 0 0.2 0.2 {}

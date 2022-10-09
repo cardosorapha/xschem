@@ -1,0 +1,32 @@
+v {xschem version=3.1.0 file_version=1.2
+}
+G {}
+K {type=y_junction
+
+format="@name @pinlist loss=@loss"
+
+template="name=yj1
+loss=0
+device=y_junction
+"
+}
+V {}
+S {}
+E {}
+L 4 -30 20 -20 20 {}
+L 4 -30 -20 -20 -20 {}
+L 4 20 0 30 0 {}
+L 4 -30 -5 -30 -2.5 {}
+L 4 -27.5 -5 -27.5 -2.5 {}
+L 4 -27.5 -5 -25 -2.5 {}
+L 4 -25 -5 -25 -2.5 {}
+B 4 -20 -30 20 30 {}
+B 5 -32.5 -22.5 -27.5 -17.5 {name=in1 dir=inout}
+B 5 -32.5 17.5 -27.5 22.5 {name=in2 dir=inout}
+B 5 27.5 -2.5 32.5 2.5 {name=out dir=inout}
+P 9 14 -20 -25 -20 -15 -15 -15 7.5 0 -15 15 -20 15 -20 25 -15 25 15 5 20 5 20 -5 15 -5 -15 -25 -20 -25 {}
+T {@name} -18.75 -32.5 2 1 0.2 0.2 {}
+T {@#0:net_name} -80 -46.25 0 0 0.15 0.15 {layer=15}
+T {@#2:net_name} 20 -47.5 0 0 0.15 0.15 {layer=15}
+T {loss=@loss} -17.5 43.75 2 1 0.2 0.2 {}
+T {@#1:net_name} -20 38.75 2 0 0.15 0.15 {layer=15}

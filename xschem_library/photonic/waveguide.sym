@@ -1,0 +1,34 @@
+v {xschem version=3.1.0 file_version=1.2
+}
+G {}
+K {type=waveguide
+
+format="@name @pinlist length=@length neff=@neff ng=@ng"
+
+template="name=wg1
+length=10n
+device=waveguide
+neff=1
+ng=1"
+}
+V {}
+S {}
+E {}
+L 4 20 0 30 0 {}
+L 4 -30 0 -20 0 {}
+L 4 -27.5 -7.5 -27.5 -5 {}
+L 4 -25 -7.5 -25 -5 {}
+L 4 -25 -7.5 -22.5 -5 {}
+L 4 -22.5 -7.5 -22.5 -5 {}
+B 4 -20 -10 20 10 {}
+B 5 -32.5 -2.5 -27.5 2.5 {name=in dir=inout pinnumber=0}
+B 5 27.5 -2.5 32.5 2.5 {name=out dir=inout pinnumber=1}
+P 9 5 -20 -5 -20 5 20 5 20 -5 -20 -5 {}
+T {@name} 20 -23.75 0 1 0.2 0.2 {}
+T {length=@length} -20 11.25 0 0 0.2 0.2 {}
+T {@#0:pinnumber} -27.5 -18.75 0 1 0.2 0.2 {layer=13}
+T {@#1:pinnumber} 27.5 -3.75 2 1 0.2 0.2 {layer=13}
+T {@#0:net_name} -90 -26.25 0 0 0.15 0.15 {layer=15}
+T {@#1:net_name} 87.5 -15 2 0 0.15 0.15 {layer=15}
+T {neff=@neff} -20 33.75 2 1 0.2 0.2 {}
+T {ng=@ng} -20 43.75 2 1 0.2 0.2 {}
